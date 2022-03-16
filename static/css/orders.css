@@ -1,0 +1,115 @@
+
+body {
+    min-height: 200%;
+    /*display: grid;*/
+    /*grid-template-rows: 1fr auto;*/
+    font-family: 'Open Sans', sans-serif;
+!important;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    /*flex: 1 0 auto;*/
+    margin: 0;
+    padding: 0;
+}
+
+.searchDiv {
+    display: block;
+    width: 300px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.searchDiv div {
+    margin-right: 0;
+!important;
+}
+
+.getOrderForm {
+    width: 350px;
+}
+
+@media (min-width: 1200px) {
+    .getOrderForm {
+        position: absolute;
+        margin: 70px 0 0 50px;
+    }
+
+}
+
+@media (max-width: 1199px) {
+    .getOrderForm {
+        margin: auto;
+        margin-top: 70px;
+    }
+}
+
+.orders {
+    display: block;
+    width: 80%;
+    min-width: 370px;
+    margin: auto;
+    margin-top: 80px;
+    overflow-y: scroll;
+    height: 500px;
+    /*overflow:y;*/
+}
+
+.orders > ul > li {
+    width: 40%;
+    min-width: 350px;
+    display: block;
+    padding: 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .8);
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.orders > ul > li > h1 img{
+    float: right;
+}
+.orders > ul > li > h1 img:hover{
+    opacity: 0.7;
+}
+.orders > ul > li h2{
+    margin-bottom: 15px;
+
+}
+.orders > ul > li h2 a {
+    float: right;
+}
+
+
+.aboutOrder > li {
+    margin-top: 7px;
+    display: block;
+}
+
+.aboutOrder > li > a:nth-child(n+2) {
+    color: lightslategray;
+    float: right;
+}
+
+.aboutOrder > li > a:first-child {
+    color: white;
+    display: inline-block;
+}
+
+.aboutOrder > li:last-child > p {
+    display: inline-block;
+    color: lightslategray;
+}

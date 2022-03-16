@@ -1,0 +1,145 @@
+body {
+    min-height: 200%;
+    /*font-family: 'Heebo', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    /*flex: 1 0 auto;*/
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/*section:last-child{*/
+/*    margin-top: 50px;*/
+/*}*/
+
+.upperDiv {
+    margin-left: 10%;
+    min-width: 330px;
+    width: 40vw;
+    text-transform: full-width;
+    margin-right: 20px;
+}
+
+.upperDiv h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 33px;
+}
+
+.upperDiv h6 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.upperDiv > h1 > a {
+    font-size: 33px;
+    padding-top: 15px;
+    white-space: nowrap;
+}
+
+.productsInBag {
+    /*width: 80vw;*/
+    /*display: block;*/
+    margin: auto;
+}
+
+.productsInBag > ul > li {
+    padding-bottom: 30px;
+    display: block;
+    margin: auto;
+    min-width: 330px;
+    width: 90vw;
+    border-bottom: 1px solid lightgray;
+    margin-top: 70px;
+}
+
+.productUl li {
+    vertical-align: top;
+    display: inline-block;
+    width: 40%;
+}
+.productUl li:last-child{
+    margin-left: 20px;
+    width: 50%;
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .productsInBag ul li img {
+        margin-left: 9%;
+    }
+}
+
+@media (min-width: 993px) {
+    .productsInBag ul li img {
+        margin-left: 14.5%;
+    }
+}
+
+.descriptionProduct {
+    margin-right: 0;
+    height: 100%;
+    display: table;
+}
+
+.descriptionProduct h4 {
+    /*display: inline-block;*/
+    padding-top: 20px;
+}
+
+/*.descriptionProduct button{*/
+/*    margin-top: 20px;*/
+/*}*/
+
+
+.arrangeOrder h3{
+    font-size: 23px;
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+.arrangeOrder h3:nth-child(3){
+    font-size: 27px;
+    font-weight: 400;
+}
+.arrangeOrder li{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+#arrangeOrder{
+    margin-top: 40px;
+}
+@media (min-width: 593px){
+    .arrangeOrder h3 a{
+        float: right;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 592px) {
+    .arrangeOrder a{
+        display: block;
+        white-space: nowrap;
+    }
+}
+

@@ -1,0 +1,20 @@
+.loginForm{
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    max-width: 50vw;
+}
+.ui.form .fields{
+    margin-bottom: 10px;!important;
+}
+/*@media (min-width: 992px){*/
+/*    .loginForm{*/
+/*        margin-left: 70px;*/
+/*    }*/
+/*}*/
+/*@media (max-width: 991px){*/
+/*    .ui.form.fields>.field{*/
+/*        display: block;*/
+/*        margin: auto;!important;*/
+/*    }*/
+/*}*/

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>powerBanks</title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
+    <script src="../js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/powerBanks.css">
+    <link rel="stylesheet" type="text/css" href="../css/headphones.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    <script src="../js/powerBanks.js"></script>
+    <script src="../js/menu.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" type="text/css" href="css/main.css">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body onload="products.approxPrice();menu.printNumOfProducts()">
+<wrapper class="wrapper">
+    <content class="content">
+        <div class="menu2" >
+            <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="margin: 0;">
+                            <a class="nav-link" href="main.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="powerbanks.html">Xiaomi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headphones.html">Headphones</a>
+                        </li>
+                        <li class="nav-item" id="menuBag">
+                            <a class="nav-link" href="bag.html"><img src="../images/icons8-shopping-bag-24.png" width="17px"><h6 id="numOfProducts">(2)</h6></a>
+                        </li>
+                        <li class="nav-item" id="menuSearch">
+                            <a class="nav-link" href="#"><img src="../images/graysearch.png" width="17px"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <section>
+            <div class="mainContent">
+
+                <div class="upperDiv">
+                    <a>Headphones Xiaomi</a>
+                    <a>от 2 699.00 руб.</a>
+                </div>
+                <ul>
+                    <li>
+                        <img id="powerBankImg" src="../images/whiteHeadphones2.jpeg" width="323px">
+                        <!--                        <img src="images/powerBank2.png" width="360px">-->
+                        <div class="boxesDiv">
+                            <ul class="boxes">
+                                <li><img src="../images/box.png" width="30px">
+                                    <p>Бесплатная доставка</p></li>
+                                <li><img src="../images/open-box.png" width="30px">
+                                    <p>Бесплатный и удобный возврат</p></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="productQuestions">
+                            <a>Есть вопросы о покупке xiaomi?</a>
+                            <a href="#">Чат со специалистом по xiaomi</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>Купить Headphones Xiaomi</h2>
+                        <ul class="chooseColor">
+                            <h5>Выберите цвет.</h5>
+                            <li color="черный"
+                                onclick="products.chooseColor(this,3)">
+                                <div></div>
+                                <a>Черный</a>
+                            </li>
+                            <li color="белый"
+                                onclick="products.chooseColor(this,4)">
+                                <div></div>
+                                <a>Белый</a>
+                            </li>
+                            <li color="Синий"
+                                onclick="products.chooseColor(this,5)">
+                                <div></div>
+                                <a>Синий</a>
+                            </li>
+                        </ul>
+                        <div class="price" id="aboutPrice">
+                            <h1><a id="price">2 999.00</a> руб.</h1>
+                            <h4>Включая НДС и предписанные законодательством сборы в размере около <a
+                                    id="approxPrice"></a> руб.</h4>
+                            <h6>Цвет: <a id="colorPowerbank"></a></h6>
+                            <h5>Возможность доставки :</h5>
+                            <ul>
+                                <li>4–5 недель</li>
+                                <li>Бесплатная доставка</li>
+                                <li><a href="#">Узнайте дату доставки</a></li>
+                            </ul>
+                        </div>
+                        <!--                        <form class="ui form" method="post" >-->
+                        <!--                            <div class="field">-->
+                        <!--                                <input  name="powerbanksId">-->
+                        <!--                            </div>-->
+                        <!--                            <button class="ui button" type="submit">Submit</button>-->
+                        <div id="choosenProduct" choosenProductID="1" name="powerbanksId"></div>
+                        <div id="ButtonDiv" onclick="products.takeToBag();products.writePHP();products.printNumOfProducts()" type="submit">
+
+                        </div>
+                        <!--                        </form>-->
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </content>
+    <section class="footer-section">
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Использование cookies</a></li>
+                <li><a href="#"> Условия использования</a></li>
+                <li><a href="#">Продажа и возврат</a></li>
+                <li><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+    </section>
+</wrapper>
+</body>
+</html>

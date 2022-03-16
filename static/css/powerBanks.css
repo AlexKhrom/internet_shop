@@ -1,0 +1,278 @@
+body {
+    min-height: 200%;
+    /*display: grid;*/
+    /*grid-template-rows: 1fr auto;*/
+    font-family: 'Heebo', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    /*flex: 1 0 auto;*/
+    margin: 0;
+    padding: 0;
+}
+
+
+.upperDiv {
+    font-size: 20px;
+    font-weight: 300;
+    border-bottom: solid 1px gray;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: 70px;
+}
+
+.upperDiv a:first-child {
+    padding-left: 5%;
+}
+
+.upperDiv a:last-child {
+    float: right;
+    padding-right: 5%;
+}
+
+/*.mainContent ul{*/
+/*    position: relative;*/
+/*    z-index: -1;*/
+/*}*/
+/*.mainContent ul li img:last-child{*/
+/*    position: absolute;*/
+/*    left:170px;*/
+/*}*/
+
+@media (min-width: 975px) {
+    .mainContent > ul > li:first-child {
+        float: left;
+        margin-left: 10%;
+    }
+
+    .mainContent > ul > li:last-child {
+        float: right;
+        margin-right: 10%;
+    }
+
+    .mainContent > ul > li {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 974px) {
+    .mainContent {
+        display: block;
+        margin: auto;
+        /*width: 700px;*/
+        margin-bottom: 200px;
+    }
+
+    .mainContent > ul > li {
+        display: table;
+        margin: auto;
+    }
+}
+
+.mainContent > ul > li {
+    text-align: center;
+}
+
+.mainContent > ul > li:first-child {
+    margin-top: 50px;
+}
+
+.mainContent > ul > li:last-child {
+    margin-top: 20px;
+    width: 455px;
+}
+
+@media (max-width: 505px){
+    .mainContent > ul > li:last-child {
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+
+.mainContent h2 {
+    max-width: 100%;
+    font-size: 25px;
+    font-weight: 300;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+
+/*.mainContent ul li:first-child{*/
+/*    overflow: hidden;*/
+/*    !*max-width: 500px;*!*/
+/*}*/
+
+.boxesDiv{
+    display: block;
+}
+.boxes {
+    margin-top: 70px;
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    /*border-bottom: 1px solid lightgray;*/
+    overflow: hidden;
+}
+.boxes:after{
+    /*content: "";*/
+    /*clear: both;*/
+    /*visibility: hidden;*/
+    /*line-height: 0;*/
+    /*height: 0;*/
+
+}
+
+.boxes > li {
+    width: 49%;
+    display: inline-block;
+}
+
+.boxes > li > img {
+    padding-bottom: 15px;
+}
+
+.boxes > li:first-child {
+    float: left;
+    /*text-align: left;*/
+}
+
+.boxes > li:last-child {
+    float: right;
+    /*text-align: right;*/
+}
+
+.productQuestions{
+    margin-bottom: 50px;
+}
+.productQuestions a:first-child{
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+    display: block;
+}
+
+.chooseColor h5 {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.chooseColor li {
+    vertical-align: top;
+    display: inline-block;
+    width: 100px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.chooseColor li:hover {
+    border: 1px solid black;
+}
+
+.chooseColor li:last-child {
+    margin-left: 30px;
+}
+
+
+
+.chooseColor li a {
+    font-size: 12px;
+    margin-top: 15px;
+    display: block;
+}
+
+.chooseColor li div {
+    vertical-align: top;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    margin: auto;
+    margin-top: 35px;
+}
+
+.chooseColor li:nth-child(2) div {
+    background-color: black;
+}
+
+
+.price {
+    max-width: 80%;
+    opacity: 0.5;
+    background-color: rgba(0, 0, 255, 0.03);
+    text-align: left;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px 25px 20px 25px;
+}
+
+.price h1 {
+    font-size: 26px;
+}
+
+.price h4 {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.price h5 {
+    border-top: 1px solid lightgray;
+    font-size: 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.price ul {
+    padding-left: 15px;
+}
+
+.price ul li {
+    display: block;
+}
+#buttonToBag{
+    position: relative;
+    z-index: 1;
+}
+#ButtonDiv{
+    display: table;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.ui.primary.button {
+    margin-top: 40px;
+    width: 220px;
+    text-align: center;
+    /*opacity: 0;*/
+}
+
+@keyframes priceInfo {
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes priceInfo2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

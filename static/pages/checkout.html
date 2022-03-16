@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>powerBanks</title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
+    <script src="../js/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <script src="../js/menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    <script src="../js/checkout.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!--    <link rel="stylesheet" type="text/css" href="css/main.css">-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/checkout.css">
+
+</head>
+<body onload="menu.printNumOfProducts();checkout.printAllOnload();validation.loadValidations();formatInputs.formatPhone()">
+<wrapper class="wrapper">
+    <content class="content">
+        <div class="menu2">
+            <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" style="margin: 0;">
+                            <a class="nav-link" href="main.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="powerbanks.html">Xiaomi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headphones.html">Headphones</a>
+                        </li>
+                        <li class="nav-item" id="menuBag">
+                            <a class="nav-link" href="bag.html"><img src="../images/icons8-shopping-bag-24.png"
+                                                                     width="17px"><h6 id="numOfProducts"></h6></a>
+                        </li>
+                        <li class="nav-item" id="menuSearch">
+                            <a class="nav-link" href="#"><img src="../images/graysearch.png" width="17px"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <section class="mainSection">
+            <h1>
+                Оформление заказа
+            </h1>
+            <ul>
+                <!--                <li>-->
+                <!--                                                            <ul class="aboutOrder">-->
+                <!--                                                                <h5><a>2 позиции</a> в заказе</h5>-->
+                <!--                                                                <li>-->
+                <!--                                                                    <h4>Xiaomi powerbank, black 20 000 mA/h</h4>-->
+                <!--                                                                    <h6><a>1999</a> руб - <a>1</a>шт.</h6>-->
+                <!--                                                                </li>-->
+                <!--                                                                <li>-->
+                <!--                                                                    <h4>Xiaomi powerbank, black 20 000 mA/h</h4>-->
+                <!--                                                                    <h6><a>1999</a> руб - <a>1</a>шт.</h6>-->
+                <!--                                                                </li>-->
+                <!--                                                                <h2>Итого <a>1999</a> руб.</h2>-->
+                <!--                                                            </ul>-->
+                <!--                </li>-->
+                <!--                                           pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">-->
+
+                <li>
+                    <h2>1. Контактные данные</h2>
+                    <form class="ui form">
+                        <h4 class="ui dividing header"></h4>
+                        <div class="field">
+                            <div class="two fields">
+                                <div class="field">
+                                    <label>Имя</label>
+                                    <input type="text" name="shipping[firstname]" id="firstnameInput" placeholder="Имя"
+                                           required minlength="1">
+                                    <span class="error" aria-live="polite"></span>
+                                </div>
+                                <div class="field">
+                                    <label>Фамалия</label>
+                                    <input type="text" name="shipping[lastname]" id="lastnameInput"
+                                           placeholder="Фамилия" required minlength="1">
+                                    <span class="error" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Телефон</label>
+                            <div class="two fields">
+                                <div class="field">
+                                    <input type="text" id="phoneInput" aria-invalid="false" aria-required="true"
+                                           size="40" required minlength="11" required maxlength="20"
+                                           name="shipping[phone]" placeholder="8 (960) 321 12-12"
+                                           pattern="([\+]*[7-8]{1}\s?[ ]*[\(]*9[0-9]{2}[\)]*[ ]*\s?\d{3}[ ]*\d{2}[-]*\d{2})">
+                                    <span class="error" aria-live="polite"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="wayToGet"><h2>2. Способ получения</h2>
+                    <ul>
+                        <li id="choosePickup" onclick="checkout.printWaitToGet(0)">Самовывоз</li>
+                        <li id="chooseDelivery" onclick="checkout.printWaitToGet(1)">Доставка</li>
+                    </ul>
+                    <div id="wayToGetForm">
+                        <div class="pickup">
+                            <p>Пожалуйста, выберите пункт самовывоза.</p>
+                            <div class="chooseStore">
+                                Выбрать пункт самовывоза
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui form">
+                        <div class="field">
+                            <label>Комментарий к заказу</label>
+                            <textarea id="commentForOrder" rows="2"></textarea>
+                        </div>
+                    </div>
+<!--                    <div class="delivery">-->
+<!--                        <form class="ui form">-->
+<!--                            <div class="field">-->
+<!--                                <div class="two fields">-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Город</label>-->
+<!--                                        <input type="text" id="cityInput" name="shipping[city]" placeholder="Москва" required minlength="1">-->
+<!--                                        <span class="error" aria-live="polite"></span>-->
+<!--                                    </div>-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Улица</label>-->
+<!--                                        <input type="text" id="streetInput" name="shipping[street]" placeholder="ул. Арбат" required minlength="1">-->
+<!--                                        <span class="error" aria-live="polite"></span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="field">-->
+<!--                                <div class="three fields">-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Дом</label>-->
+<!--                                        <input type="text" id="houseInput" name="shipping[house]" required minlength="1">-->
+<!--                                        <span class="error" aria-live="polite"></span>-->
+<!--                                    </div>-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Строение</label>-->
+<!--                                        <input type="text" name="shipping[building]">-->
+<!--                                    </div>-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Корпус</label>-->
+<!--                                        <input type="text" name="shipping[corpus]">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="field">-->
+<!--                                <div class="three fields">-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Подъезд</label>-->
+<!--                                        <input type="text" name="shipping[entrance]">-->
+<!--                                    </div>-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Этаж</label>-->
+<!--                                        <input type="text" name="shipping[floor]">-->
+<!--                                    </div>-->
+<!--                                    <div class="field">-->
+<!--                                        <label>Квартира</label>-->
+<!--                                        <input type="text" name="shipping[apartment]">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+                </li>
+                <li class="confirm"><h2>3. Подтверждение и оплата</h2>
+                    <ul>
+                        <li><h3>Выберите способ оплаты</h3>
+                            <ul class="payType" id="payTypes">
+                                <li id="payType1" onclick="checkout.printConfirmBorder(this)" value="1"
+                                    valueStr="upon receipt">Наличными или
+                                    картой при
+                                    получении
+                                </li>
+                                <li id="payType2" onclick="checkout.printConfirmBorder(this)" value="2"
+                                    valueStr="bank Card">Банковской
+                                    картой онлайн
+                                </li>
+                                <li id="payType3" onclick="checkout.printConfirmBorder(this)" value="3"
+                                    valueStr="quickPay system">Система быстрых
+                                    платежей
+                                </li>
+                            </ul>
+                        </li>
+                        <li><h3>Проверка заполнения</h3>
+                            <div class="checkForm">
+                                <ul>
+                                    <li>При получении заказа мы просим показать паспорт или другой документ на указанное
+                                        имя .
+                                        <a href="#">Подробнее</a></li>
+                                    <li>
+                                        <input type="checkbox" id="checkboxInput">
+                                        Данные получателя указаны верно*
+                                        <a href="#">Изменить данные</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><h3>Получить чек по:</h3>
+                            <ul class="getCheckTo">
+                                <li id="sendToEmail" onclick="checkout.pickSendCheckTo(this,0)">
+                                    Email
+                                </li>
+                                <li id="sendToSMS" onclick="checkout.pickSendCheckTo(this,1)">
+                                    SMS
+                                </li>
+                            </ul>
+                            <div class="divFormSendTo" id="divFormSendTo">
+                                <h2>Email</h2>
+                                <div class="ui input">
+                                    <input type="email" id="mail" name="shipping[billEmail]" required minlength="8"
+                                           placeholder="Введите ваш e-mail">
+                                    <span class="error" aria-live="polite"></span>
+                                </div>
+                                <!--                                <h2>Телефон</h2>-->
+                                <!--                                <div class="ui input">-->
+                                <!--                                    <input type="text" name="shipping[billPho]" placeholder="+7">-->
+                                <!--                                </div>-->
+                            </div>
+                        </li>
+                        <li class="totalSum">
+                            <ul>
+                                <li>
+                                    <ul class="aboutOrder" id="aboutOder">
+                                        <h5><a id="positionsInOrder"></a> в заказе</h5>
+                                        <li>
+                                            <h4>Xiaomi powerbank, black 20 000 mA/h</h4>
+                                            <h6><a>1999</a> руб - <a>1</a>шт.</h6>
+                                        </li>
+                                        <li>
+                                            <h4>Xiaomi powerbank, black 20 000 mA/h</h4>
+                                            <h6><a>1999</a> руб - <a>1</a>шт.</h6>
+                                        </li>
+                                        <h2>Итого <a>1999</a> руб.</h2>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h2 id="totalNumProducts">1 товар</h2>
+                                    <h2 id="totalSum">13.000 руб</h2>
+                                    <a>
+                                        <button class="big ui primary button" onclick="checkout.sendOrderObj();">
+                                            Оплатить
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </content>
+    <section class="footer-section">
+        <div class="footer-div">
+            <ul>
+                <li><a href="#">Политика конфиденциальности</a></li>
+                <li><a href="#">Использование cookies</a></li>
+                <li><a href="#"> Условия использования</a></li>
+                <li><a href="#">Продажа и возврат</a></li>
+                <li><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+    </section>
+</wrapper>
+</body>
+</html>

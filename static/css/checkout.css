@@ -1,0 +1,363 @@
+body {
+    min-height: 200%;
+    /*font-family: 'Heebo', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.mainSection h1 {
+    font-size: 39px;
+    font-weight: 200;
+!important;
+}
+
+
+.mainSection h2 {
+    font-weight: 200;
+!important;
+}
+
+.mainSection {
+    width: 90vw;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.mainSection ul {
+    padding: 0;
+}
+
+.mainSection > ul > li {
+    margin-bottom: 90px;
+    display: block;
+}
+
+.mainSection > ul > li:first-child {
+    margin-top: 40px;
+    display: block;
+}
+
+@media (max-width: 599px) {
+    .mainSection h1 {
+        display: table;
+        margin: auto;
+    }
+}
+
+.aboutOrder {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 290px;
+    /*margin: auto;*/
+    /*float: right;*/
+}
+
+
+.aboutOrder h5 {
+    padding: 15px 15px 0 15px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.aboutOrder h2{
+    display: block;
+    margin: 15px 15px 0 15px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.aboutOrder h2 a{
+    font-size: 25px;
+    margin-left: 80px;
+}
+
+.aboutOrder li {
+    margin: 35px 15px 0 15px;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+
+.aboutOrder > li > h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.aboutOrder > li > h6 {
+    font-size: 13px;
+    color: dimgrey;
+    font-weight: 400;
+}
+
+.firstSectionUl>li{
+}
+
+/*@media (min-width: 620px) {*/
+/*    .firstSectionUl>li{*/
+/*        vertical-align: top;*/
+/*        width: 45%;*/
+/*        display: inline-block;*/
+/*    }*/
+/*    .aboutOrder {*/
+/*        float: right;*/
+/*    }*/
+/*}*/
+
+.wayToGet ul {
+    margin-top: 30px;
+    display: block;
+}
+
+.wayToGet ul li {
+    vertical-align: top;
+    padding-top: 13px;
+    width: 40%;
+    height: 70px;
+    margin-bottom: 30px;
+    margin-left: 7%;
+    border: 2px solid grey;
+    display: inline-block;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+    box-sizing: border-box;
+}
+
+.wayToGet ul li:hover {
+    border: 2px solid #0d71bb;
+}
+
+.pickup {
+    display: block;
+    width: 60%;
+    min-width: 350px;
+    height: 200px;
+    border: 1px solid grey;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 40px;
+}
+
+.chooseStore {
+    border: 1px solid black;
+    border-radius: 7px;
+    display: block;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 12px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.chooseStore:hover {
+    border: 1px solid #0d71bb;
+    color: #0d71bb;
+}
+
+.delivery {
+
+}
+
+.confirm h3 {
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.confirm > ul {
+    padding-left: 30px;
+}
+
+.confirm > ul > li {
+    margin-top: 30px;
+    display: block;
+}
+
+.payType li {
+    vertical-align: top;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 50px 0 0;
+    color: darkslategrey;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.payType li:first-child {
+    padding-top: 3px;
+}
+
+.payType li:hover {
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+}
+
+.checkForm {
+    display: block;
+    /*background-color: #0d71bb;*/
+    height: 100px;
+    width: 90%;
+    background: rgba(13, 113, 185, 0.5);
+    max-width: 900px;
+}
+
+.checkForm ul li {
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.checkForm ul li a {
+    padding-left: 10px;
+}
+
+.checkForm ul li input {
+    margin-right: 10px;
+}
+
+.checkForm ul li a:hover {
+    color: darkblue;
+}
+
+@media (max-width: 581px) {
+    .checkForm {
+        height: 150px;
+    }
+
+    .checkForm ul li a {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .checkForm {
+        height: 180px;
+    }
+}
+
+
+.getCheckTo li {
+    display: inline-block;
+    width: 170px;
+    border: 1px solid grey;
+    height: 40px;
+    padding-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.getCheckTo li:hover {
+    border: 1px solid black;
+}
+
+.getCheckTo li:last-child {
+    margin-left: -5px;
+}
+
+.divFormSendTo h2 {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+@media (max-width: 581px)and(min-width: 410px) {
+    .checkForm {
+        height: 150px;
+    }
+
+    .checkForm ul li a {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 409px) {
+    .checkForm {
+        height: 200px;
+    }
+
+    .checkForm ul li a {
+        display: block;
+        padding-left: 0;
+    }
+
+    .getCheckTo li:last-child {
+        margin-left: 0;
+    }
+}
+
+.totalSum{
+    margin-bottom: 60px;
+}
+.totalSum h2 {
+    padding-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+    .totalSum>ul>li:first-child{
+        width: 70%;
+    }
+    .totalSum>ul>li:last-child{
+        width: 29%;
+    }
+
+    .totalSum>ul>li{
+        display: inline-block;
+    }
+}
+@media (max-width: 599px) {
+    .totalSum>ul>li{
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+/* Это стили для кастомных сообщений об ошибке */
+.error {
+    display: block;
+
+    width  : 100%;
+    padding: 0;
+
+    font-size: 100%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}

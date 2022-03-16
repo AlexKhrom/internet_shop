@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+#menu{
+    position: fixed;
+    background-color: black;
+    min-width: 100vw;
+    z-index: 10;
+}
+#menuBag{
+    /*margin-top: -3px;*/
+    opacity: 0.6;
+}
+#menuSearch{
+    /*margin-top: -3px;*/
+    opacity: 0.6;
+}
+#menuBag:hover, #menuSearch:hover{
+    opacity: 1;
+}
+@media (min-width: 992px) {
+    .navbar-nav li{
+        margin-left: 80px;
+    }
+    #menuBag{
+        margin-top: -3px;
+    }
+    #menu{
+        background-color: rgba(0,0,0,.8);
+    }
+    .navbar-nav{
+        display: block;
+        margin: auto;
+    }
+}
+#menuBag h6{
+    font-size: 13px;!important;
+    display: inline-block;
+    padding-top: 5px;
+}
